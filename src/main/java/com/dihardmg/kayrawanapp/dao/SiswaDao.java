@@ -16,5 +16,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SiswaDao extends PagingAndSortingRepository<Siswa, String> {
 	Page<Siswa>findByNisContainingIgnoreCaseOrNamaContainingIgnoreCase(String nis,String nama, Pageable pageable);
-	Page<Siswa>findByNisContainingIgnoreCase(String nis, Pageable pageable);
+	Page<Siswa>findByNisContainingIgnoreCase (String nis, Pageable pageable);
 }
