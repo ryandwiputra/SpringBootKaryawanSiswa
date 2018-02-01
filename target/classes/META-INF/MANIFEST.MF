@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: kayrawan-app
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: herva023
+Implementation-Vendor-Id: com.dihardmg
+Build-Jdk: 1.8.0_101
+Implementation-URL: http://projects.spring.io/spring-boot/kayrawan-app
+ /
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
