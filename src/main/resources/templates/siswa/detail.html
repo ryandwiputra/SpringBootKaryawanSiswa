@@ -12,115 +12,254 @@
 		</ol>
 	</div>
 	<div layout:fragment="content">
-		<div class="row">
+		<div class="row box">
 			<div class="col-md-10">
-				<div class="box box-primary">
+				<div class="panel panel-default">
 					<div class="box-header with-border">
 						<h3 class="box-title">&nbsp;</h3>
 					</div>
-					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#home">Siswa</a></li>
-						<li><a data-toggle="tab" href="#menu1">Orang Tua</a></li>
-						<li><a data-toggle="tab" href="#menu1">Wali</a></li>
-
+					<ul class="nav nav-tabs  ">
+						<li class="active"><a data-toggle="tab" href="#home">SISWA</a></li>
+						<li><a data-toggle="tab" href="#menu1">AYAH</a></li>
+						<li><a data-toggle="tab" href="#menu2">IBU</a></li>
 					</ul>
-					<form class="form-horizontal" role="form" th:object="${siswa}"
-						method="post">
-						<!--				<div class="box-body"> -->
-						<div class="tab-content">
-							<div id="home" class="tab-pane fade in active">
-								<br />
-								<br />
+					<div class="panel-body form-horizontal payment-form ">
+						<form class="form-horizontal" role="form" th:object="${siswa}"
+							method="post">
+							<div class="box-body">
+								<div class="tab-content ">
+									<div id="home" class="tab-pane fade in active">
+										<br /> <br />
+
+										<div class="form-group">
+											<label class="control-label col-sm-3" for="nama"> NIS</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" th:field="*{nis}"
+													id="nis" name="nis" placeholder="Nomor Induk Siswa" />
+											</div>
+										</div>
+										<div class=" form-group">
+											<label for="alamat" class="control-label col-sm-3">Nama</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" th:field="*{nama}"
+													id="nama" name="nama" placeholder="Nama Siswa" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Tempat
+												Lahir</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control"
+													th:field="*{Tempat_Lahir}" id="Tempat_Lahir"
+													name="Tempat_Lahir" placeholder="Tempat Lahir" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Tanggal
+												Lahir</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control"
+													th:field="*{Tanggal_Lahir}" id="Tanggal_Lahir"
+													name="Tanggal_Lahir" placeholder="Tanggal Lahir" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="jeniskelamin" class="control-label col-sm-3">Jenis
+												Kelamin </label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control"
+													th:field="*{Jenis_Kelamin}" id="Jenis_Kelamin"
+													name="Jenis_Kelamin" placeholder="Jenis Kelamin" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="agama" class="control-label col-sm-3">Agama
+											</label>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" th:field="*{Agama}"
+													id="Agama" name="Agama" placeholder="Agama" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="anak_ke" class="control-label col-sm-3">Anak
+												Ke </label>
+											<div class="col-sm-2">
+												<input type="text" class="form-control"
+													th:field="*{Anak_Ke}" id="Anak_ke" name="Anak_ke"
+													placeholder="Anak ke" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="saudara" class="control-label col-sm-3">Saudara
+											</label>
+											<div class="col-sm-2">
+												<input type="text" class="form-control"
+													th:field="*{Saudara}" id="Saudara" name="Saudara"
+													placeholder="Saudara" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="Asal_Sekolah" class="control-label col-sm-3">Asal
+												Sekolah </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control"
+													th:field="*{Asal_Sekolah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="Alamat_Siswa" class="control-label col-sm-3">Alamat
+												Siswa</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control"
+													th:field="*{Alamat_Siswa}" id="Alamat_Siswa"
+													name="Alamat_Siswa" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+									</div>
+									<div id="menu1" class="tab-pane fade">
+										<br /> <br />
+										<div class="form-group">
+											<label for="Nama_Ayah" class="control-label col-sm-3">Nama
+											</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control"
+													th:field="*{Nama_Ayah}" id="Nama_Ayah" name="Nama_Ayah"
+													placeholder="Nama_Ayah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Tempat
+												Lahir </label>
+											<div class="col-sm-4">
+												<input type="text" class="form-control"
+													th:field="*{Tempat_lahir_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Tanggal
+												Lahir </label>
+											<div class="col-sm-4">
+												<input type="text" class="form-control"
+													th:field="*{Tanggal_Lahir_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Pendidikan
+											</label>
+											<div class="col-sm-4">
+												<input type="text" class="form-control"
+													th:field="*{Pendidikan_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Pekerjaan
+											</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control"
+													th:field="*{Pekerjaan_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Telephone
+											</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control"
+													th:field="*{Telephone_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Alamat
+											</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control"
+													th:field="*{Alamat_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+									</div>
+									<div id="menu2" class="tab-pane fade">
+										<br /> <br />
+										<div class="form-group">
+											<label for="Nama_Ayah" class="control-label col-sm-3">Nama
+												Ayah</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control"
+													th:field="*{Nama_Ayah}" id="Nama_Ayah" name="Nama_Ayah"
+													placeholder="Nama_Ayah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Tempat
+												Lahir Ayah</label>
+											<div class="col-sm-4">
+												<input type="text" class="form-control"
+													th:field="*{Tempat_lahir_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Tanggal
+												Lahir Ayah</label>
+											<div class="col-sm-4">
+												<input type="text" class="form-control"
+													th:field="*{Tanggal_Lahir_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Pendidikan
+												Ayah</label>
+											<div class="col-sm-4">
+												<input type="text" class="form-control"
+													th:field="*{Pendidikan_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Pekerjaan
+												Ayah</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control"
+													th:field="*{Pekerjaan_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Telephone
+												Ayah</label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control"
+													th:field="*{Telephone_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="alamat" class="control-label col-sm-3">Alamat
+												Ayah</label>
+											<div class="col-sm-6">
+												<input type="text" class="form-control"
+													th:field="*{Alamat_Ayah}" id="Asal Sekolah"
+													name="Asal Sekolah" placeholder="Asal Sekolah" />
+											</div>
+										</div>
+									</div>
+								</div>
 
 								<div class="form-group">
-									<label class="control-label col-sm-2" for="nama"> NIS</label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control" th:field="*{nis}"
-											id="nis" name="nis" placeholder="Nomor Induk Siswa" />
-									</div>
-								</div>
-								<div class=" form-group">
-									<label for="alamat" class="control-label col-sm-2">Nama</label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control" th:field="*{nama}"
-											id="nama" name="nama" placeholder="Nama Siswa" />
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="alamat" class="control-label col-sm-2">Tempat
-										Lahir</label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control"
-											th:field="*{Tempat_Lahir}" id="Tempat_Lahir"
-											name="Tempat_Lahir" placeholder="Tempat Lahir" />
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="jeniskelamin" class="control-label col-sm-2">Jenis
-										Kelamin </label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control"
-											th:field="*{Jenis_Kelamin}" id="Jenis_Kelamin"
-											name="Jenis_Kelamin" placeholder="Jenis Kelamin" />
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="agama" class="control-label col-sm-2">Agama
-									</label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control" th:field="*{Agama}"
-											id="Agama" name="Agama" placeholder="Agama" />
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="anak_ke" class="control-label col-sm-2">Anak
-										Ke </label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control" th:field="*{Anak_Ke}"
-											id="Anak_ke" name="Anak_ke" placeholder="Anak ke" />
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="saudara" class="control-label col-sm-2">Saudara
-									</label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control" th:field="*{Saudara}"
-											id="Tempat_Lahir" name="Tempat_Lahir"
-											placeholder="Tempat Lahir" />
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="alamat" class="control-label col-sm-2">Asal
-										Sekolah </label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control"
-											th:field="*{Asal_Sekolah}" id="Asal Sekolah"
-											name="Asal Sekolah" placeholder="Asal Sekolah" />
-									</div>
+									<a th:href="@{/siswa/list}" class="btn btn-default"
+										role="button"> <span aria-hidden="true"></span>Batal
+									</a>
+									<button type="submit" class="box-title btn btn-primary">Simpan</button>
 								</div>
 							</div>
-							<div id="menu1" class="tab-pane fade">
-							<br/>
-							<br/>
-								<div class="form-group">
-									<label for="alamat" class="control-label col-sm-2">Nama Ayah</label>
-									<div class="col-sm-10">
-										<input type="text" class="form-control"
-											th:field="*{Asal_Sekolah}" id="Asal Sekolah"
-											name="Asal Sekolah" placeholder="Asal Sekolah" />
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="form-group">
-							<a th:href="@{/siswa/list}" class="btn btn-default" role="button">
-								<span aria-hidden="true"></span>Batal
-							</a>
-							<button type="submit" class="box-title btn btn-primary">Simpan</button>
-						</div>
-						<!--  			</div> -->
-					</form>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
